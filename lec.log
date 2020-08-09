@@ -1,0 +1,115 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+0
+CPU time     : 0.30    seconds
+Elapse time  : 0       seconds
+Memory usage : 284.68  M bytes
+// Command: read_library slow.lib -lib -revised
+// Parsing file slow.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:1)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:16)
+// Note: Read Liberty library successfully
+0
+CPU time     : 0.54    seconds
+Elapse time  : 1       seconds
+Memory usage : 302.21  M bytes
+// Command: read_design bound_flasher_1710869.v -verilog -golden 
+// Parsing file bound_flasher_1710869.v ...
+// Golden root module is set to 'bound_flasher'
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:1)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:3)
+// Warning: (RTL1.6) Blocking assignment is in sequential always block (occurrence:7)
+// Warning: (RTL2.2) Variable is referenced but never assigned (occurrence:1)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:30)
+// Warning: (RTL3.3) Non-constant value assignment is in asynchronous set/reset value (occurrence:1)
+// Warning: (RTL3.4) DFF/DLAT is with both asynchronous set and reset connections (occurrence:2)
+// Warning: (RTL7.3) Array index in RHS might be out of range (occurrence:1)
+// Warning: (RTL7.4) Array index in LHS might be out of range (occurrence:3)
+// Warning: (RTL12) Referenced variable(s)/signal(s) are not in sensitivity list (occurrence:5)
+// Warning: (RTL23) Flop with asynchronous hold might cause non-equivalence with synthesized netlist (occurrence:1)
+// Warning: (IGN1.1) Initial construct is not supported. The entire initial construct will be ignored (occurrence:2)
+// Warning: There are 30 undriven nets in Golden
+// Note: Read VERILOG design successfully
+0
+// Command: read_design bound_flasher_m.v -verilog -revised 
+// Parsing file bound_flasher_m.v ...
+// Revised root module is set to 'bound_flasher'
+// Warning: (RTL14) Signal has input but it has no output (occurrence:3)
+// Note: Read VERILOG design successfully
+0
+// Command: set_mapping_method -name only 
+0
+// Command: set_system_mode lec 
+// Processing Golden ...
+// Modeling Golden ...
+// Warning: (F34) Converted 5 X assignment(s) as don't care(s)
+// (F32) Created 30 Z gate(s) for floating net(s) and floating pin(s)
+// Processing Revised ...
+// Modeling Revised ...
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 75
+// Revised key points = 45
+// Mapping key points ...
+// Warning: Golden has 30 unmapped key points
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            3      16     26        45      
+--------------------------------------------------------------------------------
+Revised           3      16     26        45      
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   Z         Total   
+--------------------------------------------------------------------------------
+Not-mapped        30        30      
+================================================================================
+// Warning: Key point mapping is incomplete
+0
+// Command: map_key_points
+// Mapping key points ...
+// Warning: Golden has 30 unmapped key points
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            3      16     26        45      
+--------------------------------------------------------------------------------
+Revised           3      16     26        45      
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   Z         Total   
+--------------------------------------------------------------------------------
+Not-mapped        30        30      
+================================================================================
+// Warning: Key point mapping is incomplete
+0
+// Command: add_compared_points -all 
+// 42 compared points added to compare list
+0
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           16     6         22      
+--------------------------------------------------------------------------------
+Non-equivalent       0      20        20      
+================================================================================
+0
+
+Standard input has been closed.
